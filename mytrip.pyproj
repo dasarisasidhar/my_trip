@@ -28,21 +28,40 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="mytrip\src\controller\pilot_views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mytrip\src\controller\user_views.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mytrip\src\controller\__init__.py" />
+    <Compile Include="mytrip\src\__init__.py" />
     <Compile Include="mytrip\__init__.py" />
-    <Compile Include="mytrip\views.py" />
+    <Compile Include="mytrip\src\controller\views.py" />
     <Compile Include="app.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="mytrip\" />
+    <Folder Include="mytrip\src\" />
+    <Folder Include="mytrip\src\controller\" />
+    <Folder Include="mytrip\src\model\" />
+    <Folder Include="mytrip\src\service\" />
+    <Folder Include="mytrip\test\" />
     <Folder Include="mytrip\static\" />
     <Folder Include="mytrip\static\content\" />
     <Folder Include="mytrip\static\fonts\" />
+    <Folder Include="mytrip\static\images\" />
     <Folder Include="mytrip\static\scripts\" />
     <Folder Include="mytrip\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="mytrip\static\images\bike.jpg" />
+    <Content Include="mytrip\static\images\car.jpg" />
+    <Content Include="mytrip\static\images\car1.png" />
+    <Content Include="mytrip\static\images\car2.jpg" />
+    <Content Include="mytrip\static\images\logo.png" />
     <Content Include="requirements.txt" />
     <Content Include="mytrip\static\content\bootstrap.css" />
     <Content Include="mytrip\static\content\bootstrap.min.css" />

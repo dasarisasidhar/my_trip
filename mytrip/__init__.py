@@ -1,8 +1,7 @@
 """
-The flask application package.
+    mytrip app package.
 """
-
 from flask import Flask
 app = Flask(__name__)
 
-import mytrip.views
+from mytrip import src

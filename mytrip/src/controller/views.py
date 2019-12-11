@@ -1,10 +1,11 @@
 """
-Routes and views for the flask application.
+Routes and views for the main.
 """
 
 from datetime import datetime
 from flask import render_template
 from mytrip import app
+from flask import url_for
 
 @app.route('/')
 @app.route('/home')
@@ -35,3 +36,4 @@ def about():
         year=datetime.now().year,
         message='Your application description page.'
     )
+
