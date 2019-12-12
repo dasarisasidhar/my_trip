@@ -8,9 +8,11 @@ def pilot():
 
 @app.route('/pilot/login')
 def pilot_login():
-    return "pilot login"
+    return render_template(
+        'pilot_login.html')
 
 @app.route('/pilot/signup')
 def pilot_signup():
-    return "pilot signup"
+    return render_template(
+        'pilot_signup.html')
 

@@ -1,0 +1,50 @@
+﻿<!-- templates/signup.html -->
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="column is-4 is-offset-4">
+    <h3 class="title">Pilot Sign Up</h3>
+    <div class="box">
+        <form method="POST" action="/signup">
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Name:</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name to display" name="name">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Email:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="email">Phone:</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="phone" placeholder="Enter phone" name="phone">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Password:</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Upload DL:</label>
+                <div class="col-sm-10">
+                    <input type="file" class="form-control" id="dl" placeholder="Upload Your Driving License" name="DL">
+                </div>
+            </div>     
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="pwd">Upload RC:</label>
+                <div class="col-sm-10">
+                    <input type="file" class="form-control" id="rc" placeholder="Upload Your RC" name="DL">
+                </div>
+            </div>
+
+            <button class="btn btn-default">Sign Up</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

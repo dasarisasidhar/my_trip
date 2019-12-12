@@ -37,3 +37,13 @@ def about():
         message='Your application description page.'
     )
 
+@app.route('/sasi/getmytrip/dashboard')
+def dashboard():
+    """Renders the about page."""
+    return render_template(
+        'dashboard.html',
+        title='About',
+        year=datetime.now().year,
+        message='Your application description page.'
+    )
+

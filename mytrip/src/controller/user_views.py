@@ -8,8 +8,12 @@ def user():
 
 @app.route('/user/login')
 def user_login():
-    return "user login"
+    return render_template(
+        'user_login.html')
 
-@app.route('/user/signup')
+@app.route('/user/signup', methods = ["GET","POST"])
 def user_signup():
-    return "user signup"
+    return render_template(
+        'user_signup.html')
+    if(methods == "POST"):
+        pass
