@@ -35,6 +35,12 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="mytrip\src\controller\__init__.py" />
+    <Compile Include="mytrip\src\model\validate.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="mytrip\src\service\db.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="mytrip\src\__init__.py" />
     <Compile Include="mytrip\__init__.py" />
     <Compile Include="mytrip\src\controller\views.py" />
