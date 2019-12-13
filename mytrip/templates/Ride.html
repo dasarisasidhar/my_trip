@@ -1,0 +1,43 @@
+﻿<!-- templates/login.html -->
+{% extends "layout.html" %}
+
+{% block content %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<style>
+    body {
+        background-image: url('../static/images/bg2.jfif');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100% 100%;
+    }
+    .container {
+              margin: auto;
+              width: 50%;
+              padding: 10px;
+            }
+</style>
+
+<body>
+    <div class="container">
+        <form action="/action_page.php">
+            <div class="row">
+                <label class=".bg-primary">Source:</label>
+                <input type="text" class="form-control" id="src" placeholder="Enter Yoru source location" name="src">
+                <p><a href="/maps" class="btn btn-primary btn-large">location</a></p>
+                <br />
+                <label class=".bg-primary"> Destination:</label>
+                <input type="text" class="form-control" id="dest" placeholder="Enter Your Destination location" name="dest">
+            </div>
+            <br />
+            <button type="submit" class="btn btn-primary mt-3">Book a Trip</button>
+        </form>
+    </div>
+</body>
+{% endblock %}

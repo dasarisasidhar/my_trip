@@ -28,6 +28,10 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="config.py">
+      <SubType>Code</SubType>
+      <Publish>False</Publish>
+    </Compile>
     <Compile Include="mytrip\src\controller\pilot_views.py">
       <SubType>Code</SubType>
     </Compile>
@@ -35,6 +39,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="mytrip\src\controller\__init__.py" />
+    <Compile Include="mytrip\src\model\services.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="mytrip\src\model\validate.py">
       <SubType>Code</SubType>
     </Compile>
@@ -63,10 +70,17 @@
     <Folder Include="mytrip\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="mytrip\static\images\bg.jpg" />
+    <Content Include="mytrip\static\images\bg2.jfif" />
+    <Content Include="mytrip\static\images\bg3.jfif" />
     <Content Include="mytrip\templates\adminlayout.html" />
     <Content Include="mytrip\templates\dashboard.html" />
+    <Content Include="mytrip\templates\maps.html" />
     <Content Include="mytrip\templates\pilot_signup.html" />
     <Content Include="mytrip\templates\pilot_login.html" />
+    <Content Include="mytrip\templates\Ride.html" />
+    <Content Include="mytrip\templates\user.html" />
+    <Content Include="mytrip\templates\user_settings.html" />
     <Content Include="mytrip\templates\user_login.html" />
     <Content Include="mytrip\templates\user_signup.html" />
     <Content Include="mytrip\static\images\bike.jpg" />

@@ -10,14 +10,18 @@ from mytrip.src.service import db
 
 @app.route('/user')
 def user():
-    return "user page"
+    login = False
+    if(login):
+        return user_profile
+    else:
+       return display_user_login()
 
 @app.route('/user/login')
 def display_user_login():
     return render_template(
-        'user_login.html',
-        title='Login Page',
-        year=datetime.now().year)
+                            'user_login.html',
+                            title='Login Page',
+                            year=datetime.now().year)
 
 @app.route('/user/login', methods = ["POST"])
 def user_login():
@@ -40,9 +44,9 @@ def user_login():
 @app.route('/user/signup')
 def display_user_signup_page():
     return render_template(
-        'user_signup.html',
-        title='Signup Page',
-        year=datetime.now().year)
+                            'user_signup.html',
+                            title='Signup Page',
+                            year=datetime.now().year)
 
 @app.route('/user/signup', methods = ["POST"])
 def save_user_signup():
@@ -63,4 +67,25 @@ def save_user_signup():
         print("error: Invalid user details to register")
         return response_object, status.HTTP_203_NON_AUTHORITATIVE_INFORMATION
 
+@app.route('/user')
+def user_profile():
+    return render_template(
+                            'user.html',
+                            name = "Sasi",
+                            title='User Profile',
+                            year=datetime.now().year)
 
+@app.route('/book/ride')
+def book_ride():
+    return render_template(
+                            'Ride.html',
+                            title='Booking a Ride',
+                            year=datetime.now().year
+                            )
+@app.route('/maps')
+def maps():
+    return render_template(
+                            'maps.html',
+                            title='maps',
+                            year=datetime.now().year
+                            )
