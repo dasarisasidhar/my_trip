@@ -88,6 +88,7 @@
     <Content Include="mytrip\static\images\car1.png" />
     <Content Include="mytrip\static\images\car2.jpg" />
     <Content Include="mytrip\static\images\logo.png" />
+    <Content Include="mytrip\templates\verify.html" />
     <Content Include="requirements.txt" />
     <Content Include="mytrip\static\content\bootstrap.css" />
     <Content Include="mytrip\static\content\bootstrap.min.css" />

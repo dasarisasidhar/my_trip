@@ -3,6 +3,7 @@ from mytrip import app
 from flask import render_template
 from flask import request
 from flask import jsonify
+from flask import redirect
 from flask_api import status
 from mytrip.src.service import db
 
@@ -51,14 +52,16 @@ def display_user_signup_page():
 @app.route('/user/signup', methods = ["POST"])
 def save_user_signup():
     #signup_details = request.form
-    signup_details = request.get_json()
+    signup_details = request.form
     if db.user.save(signup_details) == True:
         response_object = {
                             'status': 'success',
-                            'message': 'User Successfully Registered.'
+                            'message': 'User Successfully Registered please verify to activate.'
                               }
         print("success: user successfully added to db")
-        return response_object, status.HTTP_200_OK
+        return ('verify.html',
+                            title='Verification Page',
+                            year=datetime.now().year)
     else:
         response_object = {
                             'status': 'failed',
@@ -89,3 +92,27 @@ def maps():
                             title='maps',
                             year=datetime.now().year
                             )
+
+@app.route('/user/verify', methods = ["POST"])
+def post_validate():
+    #signup_details = request.form
+    validation_details = request.form
+    if(validation_details["pcode"] == "0000" and validation_details["ecode"] == "0000"):
+        response_object = {
+                            'status': 'success',
+                            'message': 'User Successfully verified to activate.'
+                              }
+        print("success: user successfully added to db")
+        return response_object, status.HTTP_200_OK
+
+@app.route('/user/verify')
+def get_verify():
+    return render_template(
+                            'verify.html',
+                            title='verify',
+                            year=datetime.now().year
+                            )
+
+   
+        
+

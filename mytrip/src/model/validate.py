@@ -3,6 +3,7 @@ import re
 import random 
 import jwt
 
+
 class user:
 
     def __init__(self):
@@ -79,9 +80,11 @@ class user:
                 return("phone", id, password)
             else:
                 return("email", id, password)
-
         except Exception as e:
             print(e)
             return False
-       
-       
+
+class generate:
+    def code():
+        ramdom_value = random.randint(0,99999)
+        return ramdom_value
